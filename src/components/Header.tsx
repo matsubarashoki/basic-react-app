@@ -18,13 +18,23 @@ import {
 import { useState } from "react";
 import { HiMenu } from "react-icons/hi";
 import { MdChevronLeft, MdChevronRight } from "react-icons/md";
+import { Link } from "react-router-dom";
+import { ROUTES } from "../routes/routeConfig";
 
 const Header = () => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const menuItems = ["Home", "Products", "Services", "About", "Contact"];
+  const menuItems = [
+    "News",
+    "Gallery",
+    "Blog",
+    "PromotionBoard",
+    "InquiryForm",
+    "Questionnaire",
+    "Donation",
+  ];
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);
@@ -40,8 +50,9 @@ const Header = () => {
         <Toolbar>
           <Typography
             variant="h6"
-            component="div"
-            sx={{ flexGrow: 1, fontWeight: "bold" }}
+            component={Link}
+            to={ROUTES.HOME}
+            sx={{ flexGrow: 1, fontWeight: "bold", textDecoration: "none" }}
           >
             BRAND
           </Typography>
@@ -59,7 +70,13 @@ const Header = () => {
           ) : (
             <Box sx={{ display: "flex" }}>
               {menuItems.map((item) => (
-                <Button key={item} color="inherit" sx={{ mx: 1 }}>
+                <Button
+                  component={Link}
+                  to={ROUTES[item.toUpperCase()]}
+                  key={item}
+                  color="inherit"
+                  sx={{ mx: 1 }}
+                >
                   {item}
                 </Button>
               ))}
@@ -86,7 +103,10 @@ const Header = () => {
           <List>
             {menuItems.map((text) => (
               <ListItem key={text} disablePadding>
-                <ListItemButton>
+                <ListItemButton
+                  component={Link}
+                  to={ROUTES[text.toUpperCase()]}
+                >
                   <ListItemText primary={text} />
                 </ListItemButton>
               </ListItem>
