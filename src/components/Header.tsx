@@ -26,15 +26,7 @@ const Header = () => {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  const menuItems = [
-    "News",
-    "Gallery",
-    "Blog",
-    "PromotionBoard",
-    "InquiryForm",
-    "Questionnaire",
-    "Donation",
-  ];
+  const menuItems = ["News", "Users", "Blog"];
 
   const toggleDrawer = () => {
     setDrawerOpen(!drawerOpen);

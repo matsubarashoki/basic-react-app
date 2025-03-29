@@ -116,60 +116,6 @@ export default function News() {
   return (
     <Box sx={{ flexGrow: 1, bgcolor: "#f9f9f9", minHeight: "100vh" }}>
       {/* ヘッダー */}
-      {/* <AppBar
-        position="static"
-        color="default"
-        elevation={0}
-        sx={{ bgcolor: "white" }}
-      >
-        <Toolbar>
-          <Typography
-            variant="h6"
-            component="div"
-            sx={{ flexGrow: { xs: 1, md: 0 }, fontWeight: "bold" }}
-          >
-            NEWS PORTAL
-          </Typography>
-
-          {!isMobile && (
-            <Search>
-              <SearchIconWrapper>
-                <FiSearch />
-              </SearchIconWrapper>
-              <StyledInputBase
-                placeholder="ニュースを検索..."
-                inputProps={{ "aria-label": "search" }}
-              />
-            </Search>
-          )}
-
-          <Box sx={{ flexGrow: 1 }} />
-
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <IconButton size="large" color="inherit">
-              <MdNotifications />
-            </IconButton>
-            <IconButton size="large" color="inherit">
-              <MdBookmark />
-            </IconButton>
-            {isMobile && (
-              <IconButton
-                size="large"
-                edge="end"
-                color="inherit"
-                aria-label="menu"
-              >
-                <HiMenu />
-              </IconButton>
-            )}
-            {!isMobile && (
-              <Button variant="contained" color="primary" sx={{ ml: 2 }}>
-                登録する
-              </Button>
-            )}
-          </Box>
-        </Toolbar>
-      </AppBar> */}
       <Header />
       <Container maxWidth="lg" sx={{ mt: 4, mb: 8 }}>
         {/* カテゴリータブ */}
