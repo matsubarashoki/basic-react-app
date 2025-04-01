@@ -20,7 +20,7 @@ import { FaHeart, FaRegHeart } from "react-icons/fa";
 import { MdArrowBack, MdBookmark, MdShare } from "react-icons/md";
 import { useNavigate, useParams } from "react-router-dom";
 import { newsArticles } from "../../mock/mockData";
-import NewsArticle from "../../types";
+import { NewsArticle } from "../../types";
 
 export default function NewsDetail() {
   const articleId = useParams();
