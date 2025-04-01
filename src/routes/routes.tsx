@@ -1,4 +1,7 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
+import BlogsPage from "../feature/Blog/Blog";
+import CreateBlogPage from "../feature/Blog/CreateBlog";
+import EditBlogPage from "../feature/Blog/EditBlogPage";
 import Home from "../feature/Home/Home";
 import Login from "../feature/Login";
 import News from "../feature/News/News";
@@ -38,6 +41,13 @@ export const router = createBrowserRouter([
       { path: ROUTES.NEWS, element: <News /> },
       { path: `${ROUTES.NEWS}/:articleId`, element: <NewsDetail /> },
       { path: ROUTES.PROFILE, element: <Profile /> },
+      {
+        children: [
+          { path: ROUTES.BLOG, element: <BlogsPage /> },
+          { path: ROUTES.CREATEBLOG, element: <CreateBlogPage /> },
+          { path: `${ROUTES.EDITBLOG}/:blogId`, element: <EditBlogPage /> },
+        ],
+      },
     ],
   },
 ]);

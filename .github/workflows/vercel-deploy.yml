@@ -3,7 +3,7 @@ name: Deploy to Vercel
 on:
   push:
     branches:
-      - master # `main` ブランチに push されたときに実行
+      - master
 
 jobs:
   deploy:

@@ -37,3 +37,14 @@ export interface User {
 }
 
 export type UserList = User[];
+
+export interface BlogPost {
+  id: string;
+  title: string;
+  content: string;
+  tags: string[];
+  featuredImage: string;
+  createdAt: string;
+}
+
+export type BlogPosts = BlogPost[];

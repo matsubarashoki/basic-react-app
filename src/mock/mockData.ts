@@ -1,4 +1,4 @@
-import { NewsArticle } from "../types";
+import { BlogPost, NewsArticle } from "../types";
 
 export const newsArticles: NewsArticle[] = [
   {
@@ -102,5 +102,53 @@ export const newsArticles: NewsArticle[] = [
       "テクノロジー",
     ],
     likes: 39,
+  },
+];
+
+export const sampleBlogs: BlogPost[] = [
+  {
+    id: "1",
+    title: "Reactの基本について",
+    content:
+      "Reactは、Facebookが開発したJavaScriptライブラリです。ユーザーインターフェイスを構築するために使用され、特に単一ページアプリケーションの開発に適しています。コンポーネントベースのアプローチを採用しており、再利用可能なUIパーツを作成できます。",
+    tags: ["React", "JavaScript", "フロントエンド"],
+    featuredImage: "/placeholder.svg?height=200&width=300",
+    createdAt: "2023-04-15T10:30:00Z",
+  },
+  {
+    id: "2",
+    title: "Material-UIを使ったデザイン",
+    content:
+      "Material-UI（MUI）は、GoogleのMaterial Designを実装したReactコンポーネントライブラリです。美しく、レスポンシブなUIを簡単に構築できます。豊富なコンポーネントが用意されており、カスタマイズも容易です。",
+    tags: ["MUI", "デザイン", "React"],
+    featuredImage: "/placeholder.svg?height=200&width=300",
+    createdAt: "2023-04-20T14:45:00Z",
+  },
+  {
+    id: "3",
+    title: "Zodを使ったフォームバリデーション",
+    content:
+      "Zodは、TypeScriptファーストのスキーマ宣言と検証ライブラリです。フォームのバリデーションに使用すると、型安全性を確保しながら、ユーザー入力を検証できます。react-hook-formと組み合わせると、より強力なフォーム処理が可能になります。",
+    tags: ["Zod", "TypeScript", "バリデーション"],
+    featuredImage: "/placeholder.svg?height=200&width=300",
+    createdAt: "2023-05-05T09:15:00Z",
+  },
+  {
+    id: "4",
+    title: "Next.jsでのルーティング",
+    content:
+      "Next.jsは、Reactフレームワークで、ファイルベースのルーティングを提供します。App Routerを使用すると、ディレクトリ構造に基づいてルートが自動的に生成されます。これにより、複雑なルーティング設定を簡素化できます。",
+    tags: ["Next.js", "ルーティング", "React"],
+    featuredImage: "/placeholder.svg?height=200&width=300",
+    createdAt: "2023-05-10T16:20:00Z",
+  },
+  {
+    id: "5",
+    title: "react-iconsの使い方",
+    content:
+      "react-iconsは、さまざまなアイコンライブラリをReactコンポーネントとして使用できるパッケージです。Font Awesome、Material Design、Featherなど、多くのアイコンセットが含まれています。使い方は非常に簡単で、必要なアイコンをインポートするだけです。",
+    tags: ["react-icons", "UI", "アイコン"],
+    featuredImage: "/placeholder.svg?height=200&width=300",
+    createdAt: "2023-05-15T11:30:00Z",
   },
 ];
