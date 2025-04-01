@@ -1,7 +1,5 @@
-import NewsArticle from "../types";
+import { NewsArticle } from "../types";
 
-// ニュース記事のデータの型を適用します
-// ニュース記事のデータの型を適用します
 export const newsArticles: NewsArticle[] = [
   {
     id: 1,
