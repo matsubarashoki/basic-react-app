@@ -1,5 +1,5 @@
-import { useUsersQuery } from "../../api/Users/hooks";
-import { UserList } from "../../types";
+import { useUsersQuery } from "../../../api/Users/hooks";
+import { UserList } from "../../../types";
 
 export const useUsers = () => {
   const { data } = useUsersQuery<UserList>({

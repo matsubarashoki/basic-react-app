@@ -1,10 +1,11 @@
 import { createBrowserRouter, Navigate } from "react-router-dom";
-import Home from "../pages/Home/Home";
-import Login from "../pages/Login";
-import News from "../pages/News/News";
-import NewsDetail from "../pages/News/NewsDetail";
-import Profile from "../pages/Profile/Profile";
-import Users from "../pages/Users";
+import Home from "../feature/Home/Home";
+import Login from "../feature/Login";
+import News from "../feature/News/News";
+import NewsDetail from "../feature/News/NewsDetail";
+import Profile from "../feature/Profile/Profile";
+import CreateUserForm from "../feature/Users/components/CreateUserForm";
+import Users from "../feature/Users/components/Users";
 import ProtectedRoute from "./ProtectedRoute";
 import { ROUTES } from "./routeConfig";
 
@@ -21,7 +22,19 @@ export const router = createBrowserRouter([
     element: <ProtectedRoute />,
     children: [
       { path: ROUTES.HOME, element: <Home /> },
-      { path: ROUTES.USERS, element: <Users /> },
+      {
+        children: [
+          {
+            index: true,
+            path: ROUTES.USERS,
+            element: <Users />,
+          },
+          {
+            path: ROUTES.CREATEUSER,
+            element: <CreateUserForm />,
+          },
+        ],
+      },
       { path: ROUTES.NEWS, element: <News /> },
       { path: `${ROUTES.NEWS}/:articleId`, element: <NewsDetail /> },
       { path: ROUTES.PROFILE, element: <Profile /> },

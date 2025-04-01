@@ -1,6 +1,8 @@
-import { Box, Container, Paper, Typography } from "@mui/material";
-import Header from "../../components/Header";
-import { useUsers } from "./useUsers";
+import { Box, Button, Container, Paper, Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import Header from "../../../components/Header";
+import { ROUTES } from "../../../routes/routeConfig";
+import { useUsers } from "../hooks/useUsers";
 
 const Users = () => {
   const { users } = useUsers();
@@ -8,10 +10,24 @@ const Users = () => {
     <Box sx={{ flexGrow: 1, bgcolor: "#f9f9f9", minHeight: "100vh" }}>
       <Header />
       <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
+        <Box paddingY={2} justifyContent={"space-between"} display="flex">
+          <Box>
+            <Typography variant="h4" gutterBottom>
+              User Master
+            </Typography>
+          </Box>
+          <Box>
+            <Button
+              component={Link}
+              to={ROUTES.CREATEUSER}
+              size="large"
+              variant="contained"
+            >
+              Create User
+            </Button>
+          </Box>
+        </Box>
         <Box paddingY={2}>
-          <Typography variant="h4" gutterBottom>
-            User Master
-          </Typography>
           <Paper elevation={3} sx={{ padding: 2 }}>
             <Typography variant="body1">
               This is the User Master page. You can manage users here.
